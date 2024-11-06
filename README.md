@@ -11,6 +11,8 @@ The expectation is that a final version will make full use of Playwright's asser
 1. run the test suite `pytest --output-subdir=<DIR_NAME>` this saves the screenshots in the specified subdirectory of the projects output dir
 2. run the powerpoint creation tool `python create_powerpoint.py <DIR_NAME>`
 3. see the powerpoint you created `open output/<DIR_NAME>.pptx`
+4. To only run test_snapshot use this command `pytest -m regression`
+5. To update the snapshots add the `--update-snapshots` flag to the pytest command you're running
 
 ## How to
 

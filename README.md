@@ -27,10 +27,27 @@ Once you've completed the test you can export it as python by chosing python fro
 
 Once the tests are recorded you can see what they are doing by running `pytest --browser webkit --headed`
 
-### Resources to develop this further
+## Run tests with the debugger
+
+* `PWDEBUG=1 pytest -s` Launches brower and test in plawright inspector so you can step through the code for all tests in project 
+* `PWDEBUG=1 pytest -s test_scenario.py` Launches browser and test in plawright inspector for a single file e.g. test_scenario.py
+* `PWDEBUG=1 pytest -s -k test_scenario.py` Launches browser and test in plawright inspector for a single test e.g test_example
+
+
+## View traces of the test
+
+The Playwright Trace Viewer is a GUI that lets you explore what happened during a test and lets you see what happened before and after each action. To enable the trace viewer run your test with the __--tracing__ flag. `pytest --t` The trace will be saved in a the test_results directory in a subdirectory for each test browser run. So to view the tesst example trace for chromium you'd run `playwright show-trace test-results/test-scenario-py-test-example-chromium/trace.zip`
+
+## Resources to develop this further
 
 Python playwright plugin:
 * https://playwright.dev/python/docs/test-runners
+
+Python Traceviewer:
+* https://playwright.dev/python/docs/trace-viewer-intro
+
+Running and Debugging tests:
+* https://playwright.dev/python/docs/running-tests
 
 Playwight Assertions:
 * https://playwright.dev/docs/test-snapshots

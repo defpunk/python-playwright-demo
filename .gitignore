@@ -164,3 +164,4 @@ cython_debug/
 output/
 .vscode
 snapshot_tests_failures/
+snapshots/test_snapshots/.DS_Store
